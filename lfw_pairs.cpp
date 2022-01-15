@@ -304,12 +304,12 @@ vector<lfw_pair_t> sc_get_img_attr(lfw_pair_t tOneAttr)
 
 #if 1
 
-    ifstream iFile("./sc_pairs.txt");
+    ifstream iFile("./lfw_pairs.txt");
     vector<lfw_pair_t> vAllAttr;
 
     if( !iFile )
     {
-        cout << "file sc_pairs.txt is not exist!" << endl;
+        cout << "file lfw_pairs.txt is not exist!" << endl;
         return vAllAttr;
     }
 
@@ -506,7 +506,7 @@ int main(int argc, char *argv[])
 	}
 */
 	vector<lfw_pair_t2> pairsInfo;
-	//获取 sc_pairs.txt 的信息，存成对应 图片名  图片名  图片路径+图片名  图片路径+图片名
+	//获取 lfw_pairs.txt 的信息，存成对应 图片名  图片名  图片路径+图片名  图片路径+图片名
 	pairsInfo = get_lfw_pairs_info(path);
 
 	for( int i = 0; i < pairsInfo.size(); i++)
@@ -522,7 +522,7 @@ int main(int argc, char *argv[])
 
 
 //---------------------------------------------------------------------------------------------
-	//生成sc_pairs.txt
+	//生成lfw_pairs.txt
 #if 1
 	vector<IMGS_INFO> vImgs;		//人名 	数量
 	vector<ONE_PEOPLE_COM> vAllCom;	//人名	组合个数
@@ -530,7 +530,7 @@ int main(int argc, char *argv[])
 	vector<int> cmpSer;
 
 	std::ofstream output_paris;
-	output_paris.open("sc_pairs.txt", ios::app);
+	output_paris.open("lfw_pairs.txt", ios::app);
 
 	string bufParis = "";
 	vector<string> sCnt;
@@ -615,7 +615,7 @@ int main(int argc, char *argv[])
 	}
 	output_paris.close();
 
-	output_paris.open("sc_pairs.txt", ios::app);
+	output_paris.open("lfw_pairs.txt", ios::app);
 
 	printf("------------------------------------< no match combination >-----------------------------------\n");
 	//不匹配的所有对数
