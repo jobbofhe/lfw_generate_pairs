@@ -1,2 +1,13 @@
 # lfw_generate_paris
-Generate a pair of face image data according to LFW data set。
+## Object
+Generate a pair of face image data according to LFW data set.
+
+## Compile
+g++ sc_pairs.cpp -o main
+
+# Run
+./main ./lfw_mini
+
+
+
+
