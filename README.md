@@ -8,6 +8,8 @@ g++ sc_pairs.cpp -o main
 # Run
 ./main ./lfw_mini
 
-
-
+# Result
+最终生成 
+people.txt,     [name, image_num]
+lfw_pair.txt.   [name, image_index]
 
